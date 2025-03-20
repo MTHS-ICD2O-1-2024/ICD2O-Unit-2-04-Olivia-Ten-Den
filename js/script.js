@@ -1,17 +1,22 @@
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
 // Created by: Olivia Ten Den
-// Created on: Mar 17, 2025
+// Created on: Mar 20, 2025
 // This file contains the JS functions for index.html
 
+"use strict"
+
 /**
- * Do basic math.
+ * This function calculates area of a triangle.
  */
-function enterClicked() {
+function calculateAreaOfTriangle () {
   // input
-  const streetNumber = parseInt(document.getElementById("street-number").value)
-  const streetName = document.getElementById("street-name").value
+  const baseOfTriangle = parseFloat(document.getElementById('base-of-triangle').value)
+  const heightOfTriangle = parseFloat(document.getElementById('height-of-triangle').value)
+
+  // process
+  const areaOfTriangle = baseOfTriangle * heightOfTriangle / 2
+
   // output
-  document.getElementById("user-address").innerHTML =
-    "<p>The address is: " + streetNumber + " " + streetName + ".</p>"
+  document.getElementById('area').innerHTML = 'The area is: ' + areaOfTriangle + ' cm²'
 }
